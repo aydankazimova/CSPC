@@ -1,14 +1,7 @@
-rule all:
-    input:
-        "figure.png"
-
-
 rule plot:
     input:
-        data="decay_observed.csv",
-        script="plot.py"
+        "decay_observed.csv"
     output:
         "figure.png"
     shell:
-        "python {input.script}"
-        
+        "python plot.py"
